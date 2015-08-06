@@ -3,11 +3,11 @@
 <?php include("../includes/functions.php");?>
 <?php include("../includes/layouts/header_inside.php");?>
 <?php
-	/*require_once("../includes/validation_functions.php");
+	require_once("../includes/validation_functions.php");
 	if(!isset($_SESSION["username"])) {
 		redirect_to("loginpage.php");
 	}
-	check_session_timeout();*/
+	check_session_timeout();
 ?>
 <style>
 	.scrollable {
