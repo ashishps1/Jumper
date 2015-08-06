@@ -1,0 +1,25 @@
+<?php
+	// Database Constants
+	
+	define("DB_SERVER", "10.38.6.39");
+	define("DB_USER", "root");
+	define("DB_PASS", "wmsdb");
+	define("DB_NAME", "jumper_dr");
+	
+	define("MS_SERVER", "10.38.1.10");
+	define("MS_USER", "sa");
+	define("MS_PASS", "cmms");
+	define("MS_NAME", "CMMS");
+	
+	// 1. Create a database connection
+	$connection2 = odbc_connect("Driver={SQL Server 2005};Server=".MS_SERVER.";Database=".MS_NAME.";", MS_USER, MS_PASS);
+	if (!$connection2) {
+		die("Database connection to MSSql failed.".odbc_errormsg());
+	}
+
+	$connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+	if (mysqli_connect_error()) {
+		die("Database connection failed: " . mysqli_connect_error()." (".mysqli_connect_errno().")");
+	}
+	
+?>
